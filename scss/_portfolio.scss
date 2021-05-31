@@ -1,0 +1,88 @@
+@use "var";
+
+//portfolio bloky
+.portfolio {
+  margin-bottom: 120px;
+  
+  @media screen and (min-width: 500px){
+    padding: 0 50px;
+  }
+  @media screen and (min-width: 750px){
+    padding: 0 80px;
+  }
+  @media screen and (min-width: 950px){
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+ &__spacer{
+   padding-top: 30px;
+   @media screen and (min-width: 600px){
+    padding-top: 80px;
+  }
+ }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+    &--turn {
+      grid-column: 2;
+    }
+  }
+
+  &__description {
+    padding-top: 20px;
+
+    @media screen and (min-width: 500px){
+      text-align: center;
+    }
+    
+    @media screen and (min-width: 950px){
+      padding: 30px 0  0 80px;
+      text-align: left;
+    }
+
+    &--turn {
+      grid-column: 1;
+      grid-row: 1;
+      @media screen and (min-width: 950px){
+        padding: 30px 50px 0  20px;
+        text-align: left;
+      }
+    }
+  }
+  &__labels{
+    display: flex ;
+    flex-wrap: wrap;
+    @media screen and (min-width: 500px){
+      justify-content: center;
+    }
+    @media screen and (min-width: 950px){
+      justify-content: flex-start;
+    }
+    
+  }
+  &__label--light {
+    font-size: 13px;
+    color: var.$c-primary-light;
+    background-color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  &__title {
+    display: block;
+    color: var.$c-primary;
+    font-size: 38px;
+    font-weight: var.$bold;
+    margin: 10px 0;
+    &:hover{
+      text-shadow: 3px 3px 10px #555b6e5d;
+      transition: .5s;
+    }
+  }
+}
+

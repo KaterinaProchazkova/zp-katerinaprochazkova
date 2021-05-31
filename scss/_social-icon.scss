@@ -1,0 +1,56 @@
+@use "var";
+
+.icon {
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 30px;
+    top:40%;
+  }
+  &__link {
+    padding: 5px 10px;
+    background: linear-gradient(145deg, #1F233E, #3D467C);
+    box-shadow:  
+        3px 3px 8px #1F233E,
+        -3px -3px 8px #3D467C;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: #3D467C;
+        box-shadow:  
+            inset 1px 1px 5px #1F233E,
+            inset -1px -1px 5px #3D467C;
+        }
+    &:hover i {
+        color: var.$c-secondary;
+        opacity: 1;
+    }
+
+    &--vertical {
+        margin-bottom: 10px;
+    }
+    &--horizontal {
+      margin-right: 10px;
+    }
+    i {
+      color: var.$c-light;
+      opacity: 0.5;
+    }
+  }
+  //icon--footer
+  &--footer {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 750px){
+  .icon--vertical  {
+      display: none;
+  }
+}
+@media screen and (max-width: 1100px){
+  .icon--vertical .contact-icon {
+      display: none;
+  }
+}

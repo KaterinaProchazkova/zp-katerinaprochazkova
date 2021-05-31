@@ -1,0 +1,170 @@
+@use "var";
+
+// menu začátek
+.menu {
+    //background-color: rgba(255, 255, 255, 0.303);
+    //position: fixed;
+    //width: 100%;
+    //margin-bottom: 150px;
+    z-index: 9999;
+    &__logo {
+      display: block;
+      float: left;
+      padding: 20px 0 16px 20px;
+      color: var.$c-light;
+      margin: 0;
+      font-size: 15px;
+      font-weight: var.$regular;
+      text-decoration: none;
+      @media screen and (min-width: 880px){
+        font-size: 20px;
+        padding-top: 16px;
+      }
+    }
+    &__nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+  
+      @media screen and (max-width: 879px){
+        background-color: #283055;
+        z-index: 999;
+      }
+    }
+    &__link {
+      display: block;
+      color: var.$c-light;
+      font-size: 14px;
+      font-weight: var.$regular;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.35s ease;
+      position: relative;
+      &--active {
+        color: var.$c-secondary;
+      }
+      &:hover {
+        @media screen and (max-width: 879px){
+          z-index: 9999;
+          background-color: #171B3A;
+          color: var.$c-secondary-light;
+        }
+      }
+  
+      @media screen and (min-width: 880px){
+        padding: 0 20px;
+        margin: 20px 10px;
+        &::before {
+          position: absolute;
+          content: '';
+          transition: all 0.35s ease;
+          opacity: 0;
+          left: 15%;
+          right: 15%;
+          top: 0;
+          bottom: 0;
+          border-left: 3px solid var.$c-secondary;
+          border-right: 3px solid var.$c-secondary;
+        }
+        &:hover{
+          color: var.$c-secondary-light;
+        }
+        &:hover::before {
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+        &--active::before {
+          opacity: 1;
+          left: 0;
+          right: 0;
+        }
+        &--active {
+          color: var.$c-secondary-light;
+        }
+      }
+    }
+  
+    &__checkbox{
+      display: none;
+    }
+    &__toggler {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 30px 20px;
+      position: relative;
+      user-select: none;
+    }
+    &__hamburger {
+      background: var.$c-light;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: .2s ease-out;
+      width: 22px;
+    
+      &::before,
+      &::after {
+        background: var.$c-light;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      &::before {
+        top: 6px;
+      }
+      &::after{
+        top: -6px;
+      }
+    }
+  }
+  
+  .menu__checkbox:checked ~ .menu__nav {
+    //display: block; tohle možná smazat v tomto kodu nebylo
+    max-height: 350px;
+  }
+  .menu__checkbox:checked ~ .menu__toggler .menu__hamburger {
+    background: transparent;
+  }
+  .menu__checkbox:checked ~ .menu__toggler .menu__hamburger::before {
+    transform: rotate(-45deg);
+  }
+  .menu__checkbox:checked ~ .menu__toggler .menu__hamburger::after {
+    transform: rotate(45deg);
+  }
+  .menu__checkbox:checked ~ .menu__toggler .menu__hamburger::before, 
+  .menu__checkbox:checked ~ .menu__toggler .menu__hamburger::after {
+    top: 0;
+  }
+    
+  @media screen and (min-width: 880px){
+    .menu__item {
+      float: left;
+    }
+    .menu__nav{
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .menu__toggler{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 880px){
+      .menu__checkbox:checked ~ .menu__nav {
+          display: block; 
+      }
+  }
+  // menu konec

@@ -1,0 +1,122 @@
+---
+layout: layouts/main-layout.njk
+title: Kontakt | Kateřina Procházková
+---
+    
+<header class="top-line bg-circles-dark"> 
+
+    <div class="container">
+
+        <!--Menu-->
+        {% include 'partials/menu.njk' %}
+
+    </div>
+
+    <div class="contact__top container">
+        <h2 class="title-gradient">Vytvořme něco nového!</h2>
+
+        <div class="contact__cols-3">
+
+            <p class="contact__info">Pracuji<br>
+                <a class="contact__link" href="/">V Plzni</a>
+            </p>
+            
+            <p class="contact__info">Telefon<br>
+                <a class="contact__link" href="tel:00420000000000"> +420 777 888 999</a>
+            </p>
+
+            <p class="contact__info">E-mail<br>
+                <a class="contact__link" href="mailto:prochazka.kate@gmail.com">prochazka.kate@gmail.com</a>
+            </p>
+
+        </div> 
+        
+    </div>
+
+    <div class="icon icon--vertical">
+        <a href="" class="icon__link icon__link--vertical contact-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="" class="icon__link icon__link--vertical contact-icon"><i class="fab fa-instagram"></i></a>
+        <a href="" class="icon__link icon__link--vertical contact-icon"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+</header>
+
+<main class="content-main">
+
+    <section class="content-line bg-circles-light">
+
+        <div class="container">
+
+            <div class="card">
+        
+                <form class="form" action="" method="POST">
+        
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="name" id="name" required>
+                        <span class="form__border"></span>
+                        <label class="form__label" for="name">Jméno a příjmení</label>
+                    </div>
+        
+                    <div class="form__field">
+                        <input class="form__input" type="email" name="email" id="email" required>
+                        <span class="form__border"></span>
+                        <label class="form__label" for="email">E-mail</label>
+                    </div>
+
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="topic" id="topic" required>
+                        <span class="form__border"></span>
+                        <label class="form__label" for="topic">Předmět</label>
+                    </div>
+        
+                    <div class="form__field ">
+                        <input class="form__input" type="tel" name="telephone" id="telephone" required>
+                        <span class="form__border"></span>
+                        <label class="form__label" for="telephone">Telefon</label>
+                    </div>
+
+                    <div class="form__field form__field--text">
+                        <textarea class="form__input form__textarea" rows="8" name="zprava" id="zprava" required></textarea>
+                        
+                        <label class="form__label" for="zprava">Vaše zpráva</label>
+                    </div>
+
+                    
+
+                    <p class="form__gdpr">Souhlasím se zpracováním osobních údajů</p>
+
+                    <button class="form__btn" type="submit">Odeslat zprávu</button>
+        
+                </form>
+        
+            </div>
+
+            <div class="contact__center">
+                <h2 class="title-dark">Pusťme se do toho!</h2>
+
+                <p class="contact__text-center">Zaujala Vás moje práce? Jste z Plzně nebo okolí? Nebo&nbsp;by jste chtěli navázat&nbsp;externí spolupráci? Těším&nbsp;se na Vaši poptávku.</p>
+
+                <a class="form__btn" href="/o-mne/">Něco o mně </a>
+            </div>
+
+            <div class="contact__cols-2 contact__spacer"> 
+
+                <div class="contact__col">
+                    <h3>MgA. Kateřina Procházková</h3>
+                    <p>IČ: 000 00 000<br>
+                        Nejsem plátce DPH</p>
+                </div>
+
+                <div class="contact__col">
+                    <p>Podnikatel je zapsán v&nbsp;živnostenském&nbsp;rejstříku <br> vedeném u Městského úřadu v Plzni</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    

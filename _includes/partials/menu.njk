@@ -1,0 +1,16 @@
+<nav class="menu">
+
+    <a class="menu__logo" href="/" >Kateřina Procházková</a>
+
+    <input class="menu__checkbox" type="checkbox" id="menu-checkbox" />
+    <label class="menu__toggler" for="menu-checkbox"><span class="menu__hamburger"></span></label>
+
+    <ul class="menu__nav">
+        <li class="menu__item"><a class="menu__link {{ 'menu__link--active' if page.fileSlug === '' }}" href="/">Domů</a></li>
+        <li class="menu__item" ><a class="menu__link {{ 'menu__link--active' if page.fileSlug === 'sluzby' }}" href="/sluzby/">Služby</a></li>
+        <li class="menu__item" ><a class="menu__link {{ 'menu__link--active' if page.fileSlug === 'portfolio' }}" href="/portfolio/">Portfolio</a></li>
+        <li class="menu__item" ><a class="menu__link {{ 'menu__link--active' if page.fileSlug === 'o-mne' }}" href="/o-mne/">O mně</a></li>
+        <li class="menu__item" ><a class="menu__link {{ 'menu__link--active' if page.fileSlug === 'kontakt' }}" href="/kontakt/">Kontakt</a></li>
+    </ul>
+
+</nav>

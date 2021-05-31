@@ -1,0 +1,42 @@
+@use "var";
+
+.tool{
+    &__text{
+      text-align: center;
+      padding: 0 20px 0 20px;
+      margin-bottom: 50px;
+      @media screen and (min-width: 880px){
+        padding: 0 200px 0 200px;
+        margin-bottom: 80px;
+      }
+    }
+    &__set {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding-bottom: 80px;
+      @media screen and (min-width: 440px){
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+      }
+      @media screen and (min-width: 850px){
+        grid-template-columns: repeat(9, 1fr);
+        gap: 30px;
+        padding-bottom: 120px;
+      }
+    }
+    &__img {
+      width: 100%;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 
+            inset 5px 5px 8px #c7cfe4d5,
+            inset -5px -5px 8px rgba(255, 255, 255, 0.614);
+      @media screen and (min-width: 550px){
+        padding: 20px;
+        box-shadow: 
+            inset 6px 6px 10px #c7cfe4d5,
+            inset -6px -6px 10px #ffffff9d;
+      }
+    }
+  }

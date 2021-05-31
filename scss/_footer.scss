@@ -1,0 +1,46 @@
+@use "var";
+
+//footer - ostylovené ikony jsou v souboru social icon
+.footer {
+    background: linear-gradient(90deg, #121431, #313861);
+    padding-top: 25px;
+    @media screen and (min-width: 880px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+    }
+    
+    &__copyright {
+      font-size: 14px;
+      color: var.$c-light;
+      font-weight: var.$thin;
+      opacity: 0.5;
+      margin: 0;
+      padding-bottom: 30px;
+      text-align: center;
+      @media screen and (min-width: 880px){
+        padding-left:  20px;
+        padding-bottom: 0;
+      }
+    }
+    &__arrow {
+      fill: var.$c-secondary-light;
+      //opacity: 0.5;
+    }
+    &__arrow-link {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      background-color: #171b3a6d;
+        &:hover path{
+          fill: var.$c-secondary;
+          //opacity: 1;
+        }  
+      @media screen and (min-width: 880px){
+        margin-top: 0;
+      }
+    }
+  }
+  //konec - footer

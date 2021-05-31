@@ -1,0 +1,71 @@
+@use "var";
+
+.mb-5 {
+    margin-bottom: 150px;
+}
+
+.portfolio-detail {
+    text-align: center;
+    padding-bottom: 200px;
+    &__detail {
+        display: block;
+        color: var.$c-light;
+        font-weight: var.$thin;
+        margin: 30px 0 10px 0;
+        font-size: 18px;
+    }
+    &__title {
+        color: var.$c-light;
+        font-size: 40px;
+        font-weight: var.$bold;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+    &__text {
+        color: var.$c-light;
+        font-weight: var.$thin;
+        margin-top: 30px;
+    }
+    &__labels{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__label {
+        color: var.$c-light;
+        opacity: 0.8;
+        font-size: 12px;
+        font-weight: var.$thin;
+        padding: 8px 13px;
+        margin: 0 10px 10px 0;
+        border-radius: 8px;
+        background-color: #3d467c6d;
+        box-shadow:  
+            inset 4px 4px 8px #1F233E,
+            inset -4px -4px 8px #3D467C;
+    }
+    &__img-main {
+        width: 100%;
+        display: block;
+        margin: -180px auto 0 auto;
+        @media screen and (min-width: 700px){
+            width: 650px;
+        }
+    }
+    &__gallery {
+        padding: 80px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__page {
+        flex: calc(100% / 2);
+        padding: 10px;
+        
+        img {
+        width: 100%;
+        display: block;
+        }
+    }
+}
+    
