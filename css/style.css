@@ -608,13 +608,22 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.portfolio-detail__page {
-  flex: calc(100% / 2);
-  padding: 10px;
-}
 .portfolio-detail__page img {
   width: 100%;
   display: block;
+}
+.portfolio-detail__page .img__tablet {
+  margin: 10px auto;
+}
+@media screen and (min-width: 850px) {
+  .portfolio-detail__page .img__tablet {
+    display: none;
+  }
+}
+@media screen and (max-width: 850px) {
+  .portfolio-detail__page .img__pc {
+    display: none;
+  }
 }
 
 .card {

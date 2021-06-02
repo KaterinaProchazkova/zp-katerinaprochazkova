@@ -59,13 +59,25 @@
         align-items: center;
     }
     &__page {
-        flex: calc(100% / 2);
-        padding: 10px;
+        //flex: calc(100% / 2);
+        //padding: 10px;
         
         img {
-        width: 100%;
-        display: block;
+            width: 100%;
+            display: block;
         }
+        .img__tablet {
+            margin: 10px auto;
+            @media screen and (min-width: 850px){
+                display: none;
+            }
+        }
+        .img__pc {
+            @media screen and (max-width: 850px){
+                display: none;
+            }
+        }
+
     }
 }
     
